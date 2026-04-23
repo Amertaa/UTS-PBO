@@ -59,3 +59,44 @@ Contoh:
 var statusAktif: Boolean = false
     private set
 ```
+
+## 2. Class `Instruktur`
+
+Class `Instruktur` digunakan untuk merepresentasikan data pengajar atau pemateri yang bertanggung jawab dalam suatu kelas pelatihan.
+
+Class ini menyimpan informasi dasar mengenai instruktur, seperti identitas, nama, dan bidang keahlian. Dalam sistem E-Course ITK, object `Instruktur` akan dihubungkan dengan object `KelasKursus` untuk menunjukkan siapa yang mengajar pada kelas tersebut.
+
+### Atribut
+
+- `idInstruktur: String`  
+  Menyimpan ID unik instruktur sebagai identitas pembeda.
+
+- `nama: String`  
+  Menyimpan nama instruktur.
+
+- `bidang: String`  
+  Menyimpan bidang keahlian atau spesialisasi instruktur, misalnya Mobile Programming, UI/UX, atau Data Science.
+
+### Method
+
+- `tampilkanInfo(): Unit`  
+  Method ini digunakan untuk menampilkan informasi instruktur ke layar, meliputi ID, nama, dan bidang keahlian.
+
+### Peran dalam Sistem
+
+Class `Instruktur` berfungsi sebagai pihak yang mengajar atau memandu jalannya pelatihan.  
+Setiap `KelasKursus` memiliki satu instruktur yang bertanggung jawab terhadap kelas tersebut.
+
+### Contoh Implementasi
+
+```kotlin
+class Instruktur(
+    val idInstruktur: String,
+    val nama: String,
+    val bidang: String
+) {
+    fun tampilkanInfo() {
+        println("Instruktur[id=$idInstruktur, nama=$nama, bidang=$bidang]")
+    }
+}
+```
