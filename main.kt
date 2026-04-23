@@ -114,5 +114,19 @@ fun main() {
     peserta1.tampilkanInfo()
     peserta2.tampilkanInfo()
 
-    
+    // =========================
+    // SIMULASI GAGAL 1: Kuota penuh
+    // =========================
+    println("\n=== SIMULASI GAGAL: KUOTA PENUH ===")
+    kelasAndroid.daftarPeserta(peserta3)
+
+    kelasAndroid.tampilkanInfoKelas()
+    kelasAndroid.tampilkanDaftarSiswaAktif()
+    peserta3.tampilkanInfo()
+
+    // =========================
+    // SIMULASI GAGAL 2: Peserta daftar ulang
+    // =========================
+    println("\n=== SIMULASI GAGAL: PESERTA SUDAH TERDAFTAR ===")
+    kelasAndroid.daftarPeserta(peserta1)
 }
