@@ -101,7 +101,7 @@ class Instruktur(
 }
 ```
 
-## Class `KelasKursus`
+## 3. Class `KelasKursus`
 
 Class `KelasKursus` merupakan class utama dalam sistem **E-Course ITK** karena bertanggung jawab untuk mengelola proses pendaftaran peserta ke dalam sebuah kelas pelatihan.
 
