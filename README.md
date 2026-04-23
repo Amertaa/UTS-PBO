@@ -89,7 +89,7 @@ Setiap `KelasKursus` memiliki satu instruktur yang bertanggung jawab terhadap ke
 
 ### Contoh Implementasi
 
-````kotlin
+```kotlin
 class Instruktur(
     val idInstruktur: String,
     val nama: String,
@@ -99,14 +99,16 @@ class Instruktur(
         println("Instruktur[id=$idInstruktur, nama=$nama, bidang=$bidang]")
     }
 }
+```
 
-## 3. Class `KelasKursus`
+## Class `KelasKursus`
 
 Class `KelasKursus` merupakan class utama dalam sistem **E-Course ITK** karena bertanggung jawab untuk mengelola proses pendaftaran peserta ke dalam sebuah kelas pelatihan.
 
 Class ini berfungsi untuk menyimpan informasi kelas, menentukan batas maksimal peserta, mencatat daftar siswa aktif, serta menjalankan aturan bisnis saat proses pendaftaran berlangsung.
 
 ### Fungsi Utama
+
 Class `KelasKursus` memiliki beberapa fungsi utama, yaitu:
 
 - menyimpan identitas dan nama kelas,
@@ -121,33 +123,40 @@ Class `KelasKursus` memiliki beberapa fungsi utama, yaitu:
 ### Atribut
 
 #### `kodeKelas: String`
-Atribut ini digunakan untuk menyimpan kode unik dari kelas kursus.
+
+Atribut ini digunakan untuk menyimpan kode unik dari kelas kursus.  
 Kode kelas berfungsi sebagai identitas pembeda antara satu kelas dengan kelas lainnya.
 
 #### `namaKelas: String`
-Atribut ini digunakan untuk menyimpan nama kelas pelatihan.
+
+Atribut ini digunakan untuk menyimpan nama kelas pelatihan.  
 Contohnya seperti `E-Course Android Kotlin ITK`.
 
 #### `instruktur: Instruktur`
-Atribut ini menyimpan object `Instruktur` yang mengajar pada kelas tersebut.
+
+Atribut ini menyimpan object `Instruktur` yang mengajar pada kelas tersebut.  
 Dengan adanya atribut ini, setiap kelas dapat diketahui siapa pengajarnya.
 
 #### `batasMaksimalPeserta: Int`
-Atribut ini menyimpan jumlah maksimum peserta yang diperbolehkan masuk ke kelas.
+
+Atribut ini menyimpan jumlah maksimum peserta yang diperbolehkan masuk ke kelas.  
 Atribut ini dibuat `private` agar nilainya tidak dapat diakses atau diubah secara langsung dari luar class.
 
 Hal ini penting karena kuota kelas merupakan data sensitif yang harus dijaga agar tidak dimanipulasi sembarangan.
 
 #### `daftarSiswaAktif: MutableList<Peserta>`
-Atribut ini digunakan untuk menyimpan daftar peserta yang sudah berhasil mendaftar ke kelas.
+
+Atribut ini digunakan untuk menyimpan daftar peserta yang sudah berhasil mendaftar ke kelas.  
 Karena daftar ini merupakan data penting, atribut ini juga dibuat `private` agar hanya dapat diubah melalui method resmi.
 
 #### `jumlahPeserta: Int`
-Atribut ini berupa property yang digunakan untuk menampilkan jumlah peserta aktif saat ini.
+
+Atribut ini berupa property yang digunakan untuk menampilkan jumlah peserta aktif saat ini.  
 Nilainya diambil dari jumlah data yang ada di dalam `daftarSiswaAktif`.
 
 Contoh implementasi:
+
 ```kotlin
 val jumlahPeserta: Int
     get() = daftarSiswaAktif.size
-````
+```
