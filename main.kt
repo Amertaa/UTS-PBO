@@ -90,9 +90,9 @@ fun main() {
     )
 
     // Membuat peserta
-    val peserta1 = Peserta("P001", "Aulia")
-    val peserta2 = Peserta("P002", "Bima")
-    val peserta3 = Peserta("P003", "Citra")
+    val peserta1 = Peserta("P001", "Incha")
+    val peserta2 = Peserta("P002", "Naufal")
+    val peserta3 = Peserta("P003", "Supi")
 
     println("=== INFORMASI AWAL ===")
     instruktur1.tampilkanInfo()
